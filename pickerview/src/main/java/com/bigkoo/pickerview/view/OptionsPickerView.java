@@ -1,6 +1,8 @@
 package com.bigkoo.pickerview.view;
 
 import android.content.Context;
+import android.graphics.Color;
+import android.graphics.drawable.Drawable;
 import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -40,6 +42,9 @@ public class OptionsPickerView<T> extends BasePickerView implements View.OnClick
         if (mPickerOptions.customListener == null) {
             LayoutInflater.from(context).inflate(mPickerOptions.layoutRes, contentContainer);
 
+            //容器
+            LinearLayout container = (LinearLayout) findViewById(R.id.pickerview_container);
+
             //顶部标题
             TextView tvTitle = (TextView) findViewById(R.id.tvTitle);
             RelativeLayout rv_top_bar = (RelativeLayout) findViewById(R.id.rv_topbar);
@@ -62,7 +67,9 @@ public class OptionsPickerView<T> extends BasePickerView implements View.OnClick
             btnSubmit.setTextColor(mPickerOptions.textColorConfirm);
             btnCancel.setTextColor(mPickerOptions.textColorCancel);
             tvTitle.setTextColor(mPickerOptions.textColorTitle);
-            rv_top_bar.setBackgroundColor(mPickerOptions.bgColorTitle);
+            //设置背景
+            rv_top_bar.setBackgroundResource(mPickerOptions.topBarBg);
+            container.setBackgroundResource(mPickerOptions.optionsPickerBg);
 
             //设置文字大小
             btnSubmit.setTextSize(mPickerOptions.textSizeSubmitCancel);
@@ -74,7 +81,6 @@ public class OptionsPickerView<T> extends BasePickerView implements View.OnClick
 
         // ----滚轮布局
         final LinearLayout optionsPicker = (LinearLayout) findViewById(R.id.optionspicker);
-        optionsPicker.setBackgroundColor(mPickerOptions.bgColorWheel);
 
         wheelOptions = new WheelOptions<>(optionsPicker, mPickerOptions.isRestoreItem);
         if (mPickerOptions.optionsSelectChangeListener != null) {

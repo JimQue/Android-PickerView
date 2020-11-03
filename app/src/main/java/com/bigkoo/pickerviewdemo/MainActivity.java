@@ -328,7 +328,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 btn_Options.setText(tx);
             }
         })
-                .setTitleText("城市选择")
+                .isDialog(true)
                 .setContentTextSize(20)//设置滚轮文字大小
                 .setDividerColor(Color.LTGRAY)//设置分割线的颜色
                 .setSelectOptions(0, 1)//默认选中项

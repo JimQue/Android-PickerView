@@ -2,10 +2,12 @@ package com.bigkoo.pickerview.builder;
 
 import android.content.Context;
 import android.graphics.Typeface;
+import android.graphics.drawable.Drawable;
 import android.support.annotation.ColorInt;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.bigkoo.pickerview.R;
 import com.bigkoo.pickerview.configure.PickerOptions;
 import com.bigkoo.pickerview.listener.CustomListener;
 import com.bigkoo.pickerview.listener.OnOptionsSelectChangeListener;
@@ -120,6 +122,16 @@ public class OptionsPickerBuilder {
 
     public OptionsPickerBuilder setTitleColor(int textColorTitle) {
         mPickerOptions.textColorTitle = textColorTitle;
+        return this;
+    }
+
+    public OptionsPickerBuilder setTopBarBg(int drawable) {
+        mPickerOptions.topBarBg = drawable;
+        return this;
+    }
+
+    public OptionsPickerBuilder setPickerBg(int drawable) {
+        mPickerOptions.optionsPickerBg = drawable;
         return this;
     }
 

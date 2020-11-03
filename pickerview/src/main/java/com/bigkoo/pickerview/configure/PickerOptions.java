@@ -28,6 +28,8 @@ public class PickerOptions {
     private static final int PICKER_VIEW_BG_COLOR_TITLE = 0xFFf5f5f5;
     private static final int PICKER_VIEW_COLOR_TITLE = 0xFF000000;
     private static final int PICKER_VIEW_BG_COLOR_DEFAULT = 0xFFFFFFFF;
+    private static final int TOP_BAR_BG_COLOR = 0xFFFFFFFF;
+    private static final int OPTIONS_PICKER_COLOR = 0x00000000;
 
     public static final int TYPE_PICKER_OPTIONS = 1;
     public static final int TYPE_PICKER_TIME = 2;
@@ -89,6 +91,8 @@ public class PickerOptions {
     public int textColorConfirm = PICKER_VIEW_BTN_COLOR_NORMAL;//确定按钮颜色
     public int textColorCancel = PICKER_VIEW_BTN_COLOR_NORMAL;//取消按钮颜色
     public int textColorTitle = PICKER_VIEW_COLOR_TITLE;//标题颜色
+    public int topBarBg = R.drawable.topbar_bg;
+    public int optionsPickerBg = R.drawable.option_picker_bg;
 
     public int bgColorWheel = PICKER_VIEW_BG_COLOR_DEFAULT;//滚轮背景颜色
     public int bgColorTitle = PICKER_VIEW_BG_COLOR_TITLE;//标题背景颜色
