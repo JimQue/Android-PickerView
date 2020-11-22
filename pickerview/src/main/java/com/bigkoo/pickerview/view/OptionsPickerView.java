@@ -6,6 +6,7 @@ import android.graphics.drawable.Drawable;
 import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
@@ -75,6 +76,7 @@ public class OptionsPickerView<T> extends BasePickerView implements View.OnClick
             btnSubmit.setTextSize(mPickerOptions.textSizeSubmitCancel);
             btnCancel.setTextSize(mPickerOptions.textSizeSubmitCancel);
             tvTitle.setTextSize(mPickerOptions.textSizeTitle);
+
         } else {
             mPickerOptions.customListener.customLayout(LayoutInflater.from(context).inflate(mPickerOptions.layoutRes, contentContainer));
         }
@@ -103,6 +105,12 @@ public class OptionsPickerView<T> extends BasePickerView implements View.OnClick
         wheelOptions.setTextColorOut(mPickerOptions.textColorOut);
         wheelOptions.setTextColorCenter(mPickerOptions.textColorCenter);
         wheelOptions.isCenterLabel(mPickerOptions.isCenterLabel);
+
+        //设置滚轮布局宽高
+        ViewGroup.LayoutParams bodyParams = optionsPicker.getLayoutParams();
+        bodyParams.height = mPickerOptions.bodyHeight;
+        bodyParams.width = mPickerOptions.bodyWidth;
+        optionsPicker.setLayoutParams(bodyParams);
     }
 
     /**

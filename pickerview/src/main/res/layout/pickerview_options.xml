@@ -14,9 +14,9 @@
     <LinearLayout
         android:id="@+id/optionspicker"
         android:layout_width="match_parent"
-        android:layout_height="232dp"
+        android:layout_height="180dp"
         android:gravity="center"
-        android:minHeight="180dp"
+        android:minHeight="100dp"
         android:orientation="horizontal">
 
         <com.contrarywind.view.WheelView

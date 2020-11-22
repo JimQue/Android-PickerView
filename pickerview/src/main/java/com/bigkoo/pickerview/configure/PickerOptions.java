@@ -5,6 +5,8 @@ import android.graphics.Typeface;
 import android.view.Gravity;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 
 import com.bigkoo.pickerview.R;
 import com.bigkoo.pickerview.listener.CustomListener;
@@ -115,4 +117,8 @@ public class PickerOptions {
     public WheelView.DividerType dividerType = WheelView.DividerType.FILL;//分隔线类型
     public int itemsVisibleCount = 9; //最大可见条目数
     public boolean isAlphaGradient = false; //透明度渐变
+
+    //size
+    public int bodyHeight = 180;
+    public int bodyWidth = ViewGroup.LayoutParams.MATCH_PARENT;
 }

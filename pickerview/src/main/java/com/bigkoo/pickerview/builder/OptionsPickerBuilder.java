@@ -125,6 +125,16 @@ public class OptionsPickerBuilder {
         return this;
     }
 
+    public OptionsPickerBuilder setBodyHeight(int height) {
+        mPickerOptions.bodyHeight = height;
+        return this;
+    }
+
+    public OptionsPickerBuilder setBodyWidth(int width) {
+        mPickerOptions.bodyWidth = width;
+        return this;
+    }
+
     public OptionsPickerBuilder setTopBarBg(int drawable) {
         mPickerOptions.topBarBg = drawable;
         return this;
